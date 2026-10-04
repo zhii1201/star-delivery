@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#08152d" />
+    <title>星球快遞員</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header>
+        <p class="eyebrow">SPACE DELIVERY</p>
+        <h1>星球快遞員</h1>
+        <p class="subtitle">收集星星，避開隕石，把光送回宇宙。</p>
+      </header>
+
+      <section class="game-card" aria-label="星球快遞員遊戲">
+        <div class="hud" aria-live="polite">
+          <div><span>分數</span><strong id="score">0</strong></div>
+          <div><span>連擊</span><strong id="combo">x1</strong></div>
+          <div><span>生命</span><strong id="lives">♥♥♥</strong></div>
+        </div>
+        <canvas id="game" width="720" height="720" aria-label="遊戲畫面"></canvas>
+        <div id="screen" class="screen">
+          <div class="screen-panel">
+            <span class="rocket">🚀</span>
+            <h2 id="screenTitle">準備送貨！</h2>
+            <p id="screenText">移動飛船收集星星，躲開隕石。<br>連續收集能累積更高分數。</p>
+            <button id="startButton" type="button">開始任務</button>
+            <p class="help">電腦：方向鍵 / WASD　手機：下方按鍵</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="controls" aria-label="遊戲方向控制">
+        <button data-direction="up" aria-label="向上移動">▲</button>
+        <button data-direction="left" aria-label="向左移動">◀</button>
+        <button data-direction="down" aria-label="向下移動">▼</button>
+        <button data-direction="right" aria-label="向右移動">▶</button>
+      </div>
+      <p class="record">最高分：<span id="highScore">0</span></p>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
